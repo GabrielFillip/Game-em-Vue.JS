@@ -1,7 +1,12 @@
 # Game-em-Vue.JS 🕹️
 ### Um jogo criado usando HTML CSS E JS com a biblioteca Vue.js como avaliação da matéria de Desenvolvimento Web 2 do curso de DSM. Foi criado na tematica dos cards de Pokemon onde voce é o Pikachu e tem como objetivo derrotar o Gengar.
+<br>
+
 
 ## Link do Jogo 🏳️:  https://jogoheroivilaopokemon.netlify.app/
+
+<br>
+
 
 ### O jogo conta com funcionalidades simples como: 
 #### atacar ⚔️
