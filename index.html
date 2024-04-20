@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prova - Heroi e Vilão</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app" class="divapp">
+
+<!----------------------------------------------------------------------Pokedex para historico.------------------------------------------------------------->
+
+        <div class="div1">
+            <div class="divpokedex">
+                <div class="mensagem-acao">
+                    <ul>
+                        <li v-for="mensagem in mensagemAcao" class="mensagem">{{ mensagem }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!----------------------------------------------------------------------Pikachu.------------------------------------------------------------->
+
+        <div class="cartas">
+            <div class="bordapikachu">
+                <div class="personagem"> 
+                    <div class="nomevida">
+                        <h1 class="nomepikachu">Pikachu</h1>
+                        <div class="vida">{{ heroi.vida }}</div>
+                    <img src="img/raio.png" width="23px" height="23px" style="margin: 0px 0px 0px 0px">
+                    </div> <!--Fecha nomevida-->
+                    <div class="divSprite"><img  class= "sprite" src="/img/pikachu3fundo.png" width="190px" height="100px"></div>
+                    <div class="acoes"> 
+                        <button @click="atacar(true)">Atacar</button>
+                        <button @click ="defender">Defender</button>
+                        <button @click="usarPocao">Usar Poção</button>
+                        <button @click="correr">Correr</button>
+                    </div> <!--Fecha acoes-->
+                </div> <!--Fecha personagem-->
+            </div> <!--Fecha div bordapikachu-->
+
+<!----------------------------------------------------------------------Gengar.------------------------------------------------------------->
+
+    <div class="bordercartagengar"> <!--Aqui começa o Vilão-->
+        <div class="personagem2 "> <!--Miolo da carta-->
+            <div class="nomeVidaVilao"> <!--Div para colocar Nome e vida na mesma linha-->
+                <h1 class="nomeGengar">Gengar</h1>
+                <div class="vida">{{ vilao.vida }}</div>
+                <img src="/img/zoio.png" width="30px" height="30px" style="margin: -3px 0px 0px 0px">
+            </div> <!--Fecha nomeVidaVilao-->
+            <div class="divSprite2"> <img class= "sprite2" :src="vilao.imagem" width="100px" height="100px" alt="Gengar"> </div>  <!--Sprite do Gengar-->  
+            <div class="ataqueVilao"> <!--Abre ataque vilao-->
+                <div class ="ataque1"> <!--Abre ataque1-->
+                    <img class="iconeAtaque1" src="/img/zoio.png" width="20px" height="20px">
+                    <p class="tituloAtaque1">HypnoBlast</p>
+                    <p style="margin:10px 0px 0px 100px; font-weight: bold; font-family: roboto; color:rgb(64, 1, 1) ;">90</p>
+                </div> <!--Fecha ataque1-->
+                <div class="sobreAtaque1"> <p >Your opponent's Active Pokemon is now Asleep</p>  </div #sobreataque1>
+                    <div class ="ataque2"> <!--Abre ataque2-->
+                        <img class="iconeAtaque1" src="/img/zoio.png" width="20px" height="20px">
+                        <img class="iconeAtaque1" src="/img/zoio.png" width="20px" height="20px">
+                        <p class="tituloAtaque2">Dark Corridor</p>
+                        <p style="margin:10px 0px 0px 70px; font-weight: bold; font-family: roboto ; color: rgb(64, 1, 1)">90</p>
+                    </div> <!--Fecha ataque2-->
+                    <div class="sobreAtaque2">
+                        <p >Your opponent's Active Pokemon 
+                            is now Poisoned. Switch this pokemon with I of your Benched Pokemon</p>
+                    </div> <!--Fecha SobreAtaque2-->
+            </div> <!--Fecha ataque vilao-->
+        </div> <!--Fecha personagem2-->
+    </div> <!--Fecha bordercartagengar-->
+</div>  <!--Fecha Div app-->
+</body>
+</html>
+
+<script src="index.js"></script>
